@@ -12,54 +12,56 @@
     <script src="scripts.js"></script>
   </head>
   <body>
-    <h1>Shopping Cart</h1>
-    <div id="cart">
-      <form>
-        <div class="form-group">
-          <label for="firstname">First Name</label>
-          <input id="firstname" class"form-control" type="text">
-        </div>
+    <div class="container">
+      <h1>Shopping Cart</h1>
+      <br>
+      <div id="cart">
+        <form>
+          <div class="form-group">
+            <label for="firstname">First Name</label>
+            <input id="firstname" class"form-control" type="text">
+          </div>
 
-        <div class="form-group">
-          <label for="lasttname">Last Name</label>
-          <input id="lastname" class"form-control" type="text">
-        </div>
+          <div class="form-group">
+            <label for="lasttname">Last Name</label>
+            <input id="lastname" class"form-control" type="text">
+          </div>
 
-        <div class="form-group">
-          <label for="address">Address</label>
-          <input id="address" class"form-control" type="text">
-        </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input id="address" class"form-control" type="text">
+          </div>
 
-        <button type="submit" class="btn" data-target="#confirm-modal" data-toggle="modal">Submit</button>
-      </form>
+          <button type="submit" class="btn" data-target="#confirm-modal" data-toggle="modal">Submit</button>
+        </form>
+      </div>
+
+      <div class="modal fade" tabindex="-1" role="dialog" id="confirm-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Data confirmation</h4>
+            </div>
+            <div class="modal-body">
+              <p>Is this information correct?</p>
+              <span class="firstname-confirm"></span> <span class="lastname-confirm"></span>
+              <span class="address-confirm"></span>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary" data-dismiss="modal" id="final-confirm">Submit</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+      <div class="receipt">
+        <h2>Thank you for your order!</h2>
+        <p><span class="firstname"></span> <span class="lastname"></span>,</p>
+        <p>Your order has been received. Our records indicate you'd like your order to be shipped to <span class="address"></span>.
+      </div>
     </div>
-
-    <div class="modal fade" tabindex="-1" role="dialog" id="confirm-modal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Data confirmation</h4>
-          </div>
-          <div class="modal-body">
-            <p>Is this information correct?</p>
-            <span class="firstname-confirm"></span> <span class="lastname-confirm"></span>
-            <span class="address-confirm"></span>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-            <button type="submit" class="btn btn-primary" data-dismiss="modal" id="final-confirm">Submit</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <div class="receipt">
-      <h2>Thank you for your order!</h2>
-      <p><span class="firstname"></span> <span class="lastname"></span>,</p>
-      <p>Your order has been received. Our records indicate you'd like your order to be shipped to <span class="address"></span>.
-    </div>
-
 
   </body>
 </html>
